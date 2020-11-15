@@ -7,13 +7,30 @@
 	</head>
 
 	<body>
-		<main>
-			<h1>GitHub Pages のサンプルです</h1>
-			<a href="http://www.tam-tam.co.jp/tipsnote/"><button>TipsNote に戻る</button></a>
-		</main>
-
-		<script>
-			console.log('GitHub Pages Sample');
-		</script>
+    <style>
+    @media (max-width: 600px) {
+      /* 横幅が600px以上の場合に適用するスタイル */
+      .outer { margin:50px auto;width:250px;display: flex;align-items: center;justify-content: center;flex-direction: column;  }
+      .outer > div {margin-bottom: 50px;}
+    }
+    @media (min-width: 600px) {
+      /* 横幅が600px以上の場合に適用するスタイル */
+      .outer { margin:50px auto;display: grid;width: 500px;gap: 50px;grid-template-rows: 1fr 1fr;grid-template-columns: 1fr auto; }
+    }
+    @media (min-width: 800px) {
+      /* 横幅が800px以上の場合に適用するスタイル */
+      .outer { margin:50px auto;display: grid;width: 700px;gap: 50px;grid-template-rows: 1fr 1fr 1fr;grid-template-columns: 1fr 1fr auto; }
+    }
+    .box{ width:200px;height: 200px;background: pink;border-radius: 8px; }
+    </style>
+    <div class="outer">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
 	</body>
 </html>
